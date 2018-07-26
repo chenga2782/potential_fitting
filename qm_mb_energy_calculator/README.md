@@ -87,7 +87,7 @@ Use this file to customize your options to use this program. This file must be i
 
 #### [driver]: Settings pertaining to the initialization of the program.
 * input: The name of the xyz input file, including its file extension.
-* model: The calculation package we are using for calculations. Currently only supports `psi4`.
+* model: The calculation package we are using for calculations. Currently supports `psi4`, `qchem`, and `TensorMol`.
 
 #### [molecule]: Information about the molecule. This must be manually defined by the user.
 * fragments: A comma-separated list (without brackets) to indicate the number of atoms in each fragment. By default, we assume the configuation is trimer each with fragments of single atoms.
@@ -103,6 +103,8 @@ Use this file to customize your options to use this program. This file must be i
 * memory: The memory `psi4` will use for calculation.
 * threads: The amount of parallel threads `psi4` will use for calculation.
 
+#### [qchem]: Settings specific to the `qchem` model.
+* ecp: The effective core potential to be used for the calculation.
 
 #### [MBdecomp]: Settings pertaining many-body analysis of the molecule.
 * mbdecomp: Flag for enabling many-body decomposition.

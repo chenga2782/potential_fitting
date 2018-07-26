@@ -190,8 +190,9 @@ def calc_qchem_energy(molecule, fragment_indicies, config):
     qchem_input += "$rem\n"
 
     qchem_input += "jobtype " + "sp" + "\n"
-    qchem_input += "method " + config["Qchem"]["method"] + "\n"
-    qchem_input += "basis " + config["Qchem"]["basis"] + "\n"
+    qchem_input += "method " + config["model"]["method"] + "\n"
+    qchem_input += "basis " + config["model"]["basis"] + "\n"
+    qchem_input += "ecp " + config["qchem"]["ecp"] + "\n"
 
     qchem_input += "$end"
  
